@@ -658,6 +658,7 @@ body {
 }
 .about__first__btn:hover {
   background-color: #8A40EE;
+  cursor: pointer;
 }
 .about__extra {
   background-color: #FDE8F5;
