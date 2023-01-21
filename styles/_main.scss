@@ -1,0 +1,193 @@
+.main{
+    width: 73%;
+    margin: 0 auto;
+}
+
+.about{
+    margin-top: 100px;
+    &__first{
+        background-image: url(./assets/images/about-first-img.png);
+        background-size: contain;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        margin-bottom: 135px;
+        @media (max-width:768px){
+            background-image: none;
+        }
+        &__heading{
+            @include work();
+            font-size: 80px;
+            width: 60%;
+            margin: 0;
+            margin-bottom: 50px;
+            @media (max-width:768px){
+                width: 100%;
+            }
+        }
+        &__text{
+            @include mont(500, 18px);
+            width: 35%;
+            margin: 0;
+            margin-bottom: 50px;
+            @media (max-width:768px){
+                width: 80%;
+            }
+        }
+        &__btn{
+        @include mont(500, 18px, white);
+        background-color: $violet;
+        border-radius: 30px;
+        padding: 16px 52px;
+        }
+        &__btn:hover{
+            background-color: #8A40EE;
+        }
+    }
+    &__extra{
+        background-color: $pink-media;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 50px;
+        margin-bottom: 120px;
+        @media (max-width:768px){
+            flex-direction: column;
+        }
+        &__info{
+            width: 45%;
+            @media (max-width:768px){
+                width: 90%;
+            }
+            &__heading{
+                @include work();
+            }
+            &__text{
+                @include mont(500, 18px);
+            }
+        }
+    }
+}
+.features{
+    margin-bottom: 120px;
+    &__header{
+        text-align: center;
+        &__heading{
+            @include work();
+            margin-top: 0;
+            margin-bottom: 50px;
+        }
+        &__text{
+            @include mont(500, 18px);
+            margin-top: 0;
+            margin-bottom: 60px;
+        }
+    }
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 50px;
+        justify-content: space-between;
+        @media (max-width:768px){
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+    }
+}
+.card{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    @media (max-width:768px){
+        width: 100%;
+    }
+    &__img{
+        transform: translateX(20%) ;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 60px 70px;
+        padding-right: 0;
+        background-color: $green-light;
+        border-radius: 30px;
+        &__heading{
+            @include work(400, 24px);
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        &__text{
+            @include mont();
+            margin: 0;
+            margin-bottom: 20px;
+            width: 74%;
+        }
+        &__btn{
+            @include mont(700, 16px, $darkblue);
+            svg{
+                vertical-align: middle;
+            }
+        }
+        &__btn:hover{
+            cursor: pointer;
+        }
+    }
+    .info-pink{
+        background-color: $violet-light;
+    }
+}
+.testimonials{
+    background-image: url(./assets/images/testimonials-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-radius: 50px;
+    &__header{
+        text-align: center;
+        @include work;
+        color: $darkgrey;
+        &__heading{
+            margin: 0;
+            margin-bottom: 80px;
+        }
+    }
+    &__container{
+        display: flex;
+        justify-content: space-around;
+        @media (max-width:768px){
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+    }
+}
+.review{
+    width: 40%;
+    background-color: white;
+    border: 1px $violet solid;
+    border-radius: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 50px 30px;
+    gap: 15px;
+    @media (max-width:768px){
+        width: 70%;
+    }
+    &__img{
+        border-radius: 50%;
+    }
+    &__info{
+        &__name{
+            @include mont(500, 16px, $darkblue);
+        }
+        &__site{
+            @include mont(500, 14px, $violet);
+        }
+        &__text{
+            @include mont(400);
+        }
+    }
+}

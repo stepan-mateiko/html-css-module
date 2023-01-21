@@ -1,0 +1,13 @@
+@mixin mont($weight:400, $size:16px, $color:$darkgrey){
+    font-family: 'Montserrat', sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin work($weight: 700, $size: 40px, $color: $darkblue) {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
